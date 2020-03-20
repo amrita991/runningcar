@@ -1,0 +1,138 @@
+<html>
+<head>
+<title> Running Car Animation</title>
+<style>
+*
+{
+margin:0;
+padding:0;
+}
+.hero
+{
+height: 120vh;
+width: 100%;
+background-image: url(mt-kailash-tour-1490187418.jpg);
+
+position: relative;
+overflow-x: hidden;
+}
+.highway
+{
+height: 280px;
+width:550%;
+display: block;
+background-image: url(roadeer.jpg);
+position: absolute;
+bottom:0;
+left: 0;
+right: 0;
+z-index: 1;
+background-repeat: reapeat-x;
+animation: highway 5s linear infinite;
+}
+@keyframes highway
+{
+100%{
+transform: translateX(-3400px);
+}
+}
+.grass
+{
+width: 10000px;
+height: 15px;
+background-image: url(s122829022169128178_p905_i1_w1920.jpeg);
+display: block;
+position: absolute;
+bottom:279px;
+right:0;
+z-index:1;
+background-repeat: repeat-x;
+animation: highway -5s linear infinite;
+}
+@keyframes grass
+{
+ 100%{
+  transform: translateX(-1400px);
+ }
+}
+.car
+{
+width: 395px;
+left: 50%;
+bottom: 45px;
+transform: translateX(-50%);
+position: absolute;
+z-index:2;
+}
+.car img
+{
+width: 170%;
+animation: car ls linear infinite;
+}
+@keyframes car
+{
+ 100%
+ {
+ transform: translateY(-1px);
+ }
+ 50%
+ {
+ transform: translateY(1px);
+ }
+ 0%
+ {
+ transform: translateY(-1px);
+ }
+}
+.wheel1
+{
+left: 50%;
+width: 90px;
+top: 460px;
+transform: translateX(-50%);
+position: absolute;
+z-index: 2;
+}
+.wheel1 img
+{
+width: 545px;
+height: 295px;
+animation: wheel ls linear infinite;
+}
+
+.back-wheel
+{
+left: -405px;
+position: absolute;
+}
+
+.front-wheel
+{
+left: -65px;
+position: absolute;
+}
+@keyframes wheel1
+{
+100%
+{
+transform: rotate(360deg);
+}
+}
+
+
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="highway"></div>
+<div class="grass"></div>
+<div class="car">
+<img src="solid car.png">
+</div>
+<div class="wheel1">
+<img src="redcarwheel.png"  class="back-wheel" >
+<img src="redcarwheel.png"  class="front-wheel">
+</div>
+</div>
+</body>
+</html>
